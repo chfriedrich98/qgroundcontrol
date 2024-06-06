@@ -166,6 +166,7 @@ QStringList StandardModes::flightModes()
 QString StandardModes::flightMode(uint32_t custom_mode) const
 {
     auto iter = _modes.find(custom_mode);
+    qWarning() << custom_mode << iter->name;
     if (iter != _modes.end()) {
         return iter->name;
     }
